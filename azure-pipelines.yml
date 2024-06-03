@@ -19,7 +19,6 @@ steps:
   inputs:
     packageType: 'sdk'
     version: '8.x'
-    #installationPath: $(Agent.ToolsDirectory/dotnet
 
 - task: DotNetCoreCLI@2
   inputs:
@@ -46,3 +45,8 @@ steps:
 - script: |
     echo "After publish: $(Build.ArtifactStagingDirectory)"
   displayName: 'Print Artifact Staging Directory After Publish'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'MyAspNetCoreApp'
