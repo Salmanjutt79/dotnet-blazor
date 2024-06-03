@@ -31,6 +31,7 @@ steps:
     command: 'build'
     projects: '$(solution)'
     arguments: '-c $(buildConfiguration)'
+
 - script: |
     echo "Before publish: $(Build.ArtifactStagingDirectory)"
   displayName: 'Print Artifact Staging Directory Before Publish'
@@ -45,4 +46,3 @@ steps:
 - script: |
     echo "After publish: $(Build.ArtifactStagingDirectory)"
   displayName: 'Print Artifact Staging Directory After Publish'
-
