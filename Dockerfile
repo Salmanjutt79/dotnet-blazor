@@ -17,3 +17,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app ./
 ENTRYPOINT ["dotnet", "BlazorApp1.dll"]
+
+#new file to check version
