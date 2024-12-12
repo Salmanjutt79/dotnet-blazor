@@ -19,3 +19,5 @@ COPY --from=build /app ./
 ENTRYPOINT ["dotnet", "BlazorApp1.dll"]
 
 #new file to check version
+
+#new chabge
